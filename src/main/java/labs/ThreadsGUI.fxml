@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="labs.ThreadsGUIController">
+   <top>
+      <HBox prefHeight="197.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" style="-fx-border-color: brown; -fx-border-width: 6;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Region prefHeight="200.0" prefWidth="125.0" />
+                        <TextField fx:id="textA" alignment="TOP_LEFT" promptText="text" text="A" />
+                        <Region prefHeight="200.0" prefWidth="125.0" />
+                        <TextField fx:id="timeA" promptText="time" text="500" />
+                        <Region prefHeight="200.0" prefWidth="125.0" />
+                     </children>
+                  </HBox>
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#handleOnStartA" text="start A" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#handleOnPauseA" text="pauseA" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#handleOnStopA" text="stop A" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <VBox alignment="CENTER" style="-fx-border-color: rgb(68, 202, 88); -fx-border-width: 6;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Region prefHeight="200.0" prefWidth="125.0" />
+                        <TextField fx:id="textB" promptText="text" text="B" />
+                        <Region prefHeight="200.0" prefWidth="125.0" />
+                        <TextField fx:id="timeB" promptText="time" text="500" />
+                        <Region prefHeight="200.0" prefWidth="125.0" />
+                     </children>
+                  </HBox>
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#handleOnStartB" text="start B" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#handleOnPauseB" text="pauseB" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#handleOnStopB" text="stop B" />
+                  <Region prefHeight="200.0" prefWidth="125.0" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="leftText" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="21.0" right="20.0" />
+               </HBox.margin>
+            </TextArea>
+            <Region prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="rightText" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </HBox.margin>
+            </TextArea>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
